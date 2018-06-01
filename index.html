@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie ie7 lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie8 lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie ie9 lt-ie10"> <![endif]-->
+<!--[if gte IE 9]><!--> 
+<html class="no-js" prefix="ng: https://angularjs.org"> <!--<![endif]-->
+
+<head> 
+  <meta charset="UTF-8">    
+  <meta name="fragment" content="!" >  
+  <title>Redcarpet Matrimony</title>    
+<meta name="description" content="Red Carpet Matrimony" />
+<meta name="keywords" content="Red Carpet Matrimony" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link rel="icon" href="assets/images/icons/favicon_medium.png" type="image/png" >
+  <script src="assets/js/jquery.min.js"></script>  
+	<link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min7b30.css" media="screen" type="text/css" />   
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-sanitize.js"></script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHCRXG');</script>
+<!-- End Google Tag Manager -->
+    <!--<meta name="google-site-verification" content="oo7O9UcsOzKK9kFQKobRs5-HN5i5ThzaA3y_RlRy8rE" /> -->
+ 
+    <link rel="stylesheet" type="text/css" href="assets/css/style2dac.css?v=21" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+ <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css" type="text/css" />   
+ 
+ 
+   
+<style>
+#slideshow-wrapper {
+  position: absolute;
+  z-index:1;
+  top:60px;
+  left:40px;
+  margin: 50px auto 0;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+#slideshow {
+  position: absolute;
+  list-style-type: none;
+  padding: 0px 16px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#slideshow > * {
+  display: block;
+  position: absolute;
+}
+
+#slideshow img {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ccc;
+  width: 100px;
+  height: 100px;
+}
+
+#slideshow .front {
+  -webkit-transform: translateZ(50px );
+  -moz-transform: translateZ( 50px );
+  -o-transform: translateZ( 50px );
+  transform: translateZ( 50px );
+  opacity: 1;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+#slideshow .right {
+  -webkit-transform: rotateY( 90deg ) translateZ( 100px );
+  -moz-transform: rotateY( 90deg ) translateZ( 100px );
+  -o-transform: rotateY( 90deg ) translateZ( 100px );
+  transform: rotateY( 90deg ) translateZ( 100px );
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+#slideshow .left {
+  -webkit-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  -moz-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  -o-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+@media (max-width:767px) {
+	#slideshow-wrapper {display:block;}
+	
+	#slideshow-wrapper {
+	  position: absolute;
+	  z-index:1;
+	  top:10px;
+	  left:0px;
+	  margin: 70px auto 0;
+	  -webkit-perspective: 1000px;
+	  -moz-perspective: 1000px;
+	  -o-perspective: 1000px;
+	  perspective: 1000px;
+	}
+	#slideshow img {
+		width:70px;
+		height:70px;
+		}
+	
+	
+	}
+
+</style>
+
+
+
+<style>
+#shadow {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #585858;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 6000;
+    display: none; 
+}#dvLoading {
+    background: #F7F6F6 url() no-repeat center center;
+    height: 60px;
+    width: 200px;
+    position: fixed;
+    z-index: 1000000;
+    left: 50%;
+    top: 27%;
+    margin: -25px 0 0 -25px;
+    border-radius: 8px;
+    display: none;
+    font-size: 15px;
+}
+#tabs {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    z-index: 1;
+	border-bottom:1px solid #ccc;
+}
+#tabs li {
+    display: block;
+    float: left;
+    list-style: outside none none;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+#tabs li a.current {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #db670b;
+    font-family: "existencelight";
+    font-size: 18px;
+    outline: 0 none;
+	
+}
+#tabs li a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #f37c20 #f37c20 -moz-use-text-color;
+    border-image: none;
+    border-radius: 7px 7px 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    color: #666666;
+    display: block;
+    font-family: "existencelight";
+    font-size: 18px;
+    outline: 0 none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.show-left{
+	left:20%;
+	float:left;
+	
+}
+.show-right{
+	float:left;
+	left:75%;
+}
+.topshow{
+	width:100%;
+}
+.checkbox ul{
+	padding-left:0px;
+}
+.checkbox ul li{
+padding-bottom:5px;
+}
+@media (min-width: 300px) and (max-width: 420px) {
+   .discover-grid h1{
+	   font-size:12px !important;
+   } 
+  }	
+@media (min-width: 420px) and (max-width: 650px) {
+   .discover-grid h1{
+	   font-size:22px !important;
+   } 
+  }	
+</style> 
+
+
+
+ <script type="text/javascript">
+      function slideShow(){
+        // '*' to work with any element, not only 'li's
+        this.slides = $('#slideshow > *'); 
+        this.count = this.slides.length-1;
+        this.initslide = 0;
+        this.auto = null; 
+
+        this.selectTitles();
+        this.ActivateAuto();
+      };
+
+      slideShow.prototype.selectTitles = function(){
+      	var that = this;
+       // $('#slideshow-wrapper').append('<select></select>');
+      /*  $('#slideshow > * > img').each(function(i) {
+            $('select').append('<option val="'+i+'">'+ $( this ).attr('alt') +'</option>');
+          }); 
+        $('select').change(this.onChange.bind(this));*/
+      };
+
+      slideShow.prototype.nextSlide = function(){
+        this.initslide = (this.initslide++ >= this.count) ? 0 : this.initslide++;
+        this.animateSlide();
+        //console.log(this.initslide);
+      };
+
+      slideShow.prototype.animateSlide = function(){ 
+        var currentSlide = this.initslide; 
+        var nextSlide = ((currentSlide+1) > this.count) ? 0 : currentSlide+1;
+        var prevSlide = ((currentSlide-1) < 0) ? this.count - 1 : currentSlide-1;  
+
+        $('#slideshow > *').removeClass().not($('#slideshow > *').filter(function( index ) {
+                  return index === currentSlide || index === nextSlide || index === prevSlide;
+                })).addClass('left');  
+        $('#slideshow > *:eq('+prevSlide+')').addClass('left');
+        $('#slideshow > *:eq('+nextSlide+')').addClass('right');
+        $('#slideshow > *:eq('+currentSlide+')').addClass('front');
+
+        //Animate Dropdown menu
+        //$('select option').removeAttr("selected");
+       // $('select option:eq('+currentSlide+')').prop('selected',true);
+      };
+
+      slideShow.prototype.ActivateAuto = function(){
+        var that = this;
+        this.animateSlide();
+        this.auto = window.setInterval(function () {
+            that.nextSlide();
+        }, 4000);
+      };
+    
+    </script>
+  </head>
+<body>
+
+<!--Header Start-->
+<!-- Sidebar Holder -->
+<nav id="sidebar">
+  <div id="dismiss" class="dismiss"> <i class="fa fa-arrow-right"></i> </div>
+  <ul class="list-unstyled CTAs">
+    <li><a href="#" class="login dismiss" data-toggle="modal" data-target="#loginModal" id="HP_Login_CTA">Login</a></li>
+    <li><a href="registration.html" class="register" id="HP_Banner_Register_CTA">Register Free!</a></li>
+  </ul>
+  <ul class="list-unstyled components">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About us</a></li>
+    <li><a href="#" id="HP_Membership_CTA">Membership Plans</a></li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Contact us</a></li>
+  </ul>
+  <div class="side-feedback">
+    <h3>Give Us Your Feedback</h3>
+    <p> Need any help? Write to us at <a href="mailto:support@redcarpetmatrimony.com">support@redcarpetmatrimony.com</a><br>
+     Call :
+		  <a href="tel:+91-124-265 8600">+91-123-456 7890</a> 
+		       (India)</p>
+    <h3>Follow us</h3>
+    <ul class="list-inline side-social">
+      <li><a href="#!" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="overlay"></div>
+<div class="header-v2 navbar-fixed-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12 logo">
+        <div class="navbar-brand"> <a href="index.html"><img src="assets/images/logo2.png"  alt="" class="img-responsive"  style="
+    padding: 10px;
+"></a>
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-8 col-xs-2 hidden-xs"> <a class="sidebar-icon btn btn-link" id="sidebarCollapse"> <i class="fa fa-bars"></i> </a>
+        <div class="header-btns">
+          <a href="registration.html"><button type="submit" class="btn btn-primary " id="HP_Banner_Register_CTA">Register Free!</button></a>
+          <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="HP_Login_CTA">Login</button>
+        </div>
+      </div>
+      <a class="sidebar-icon btn btn-link mobile-ham" id="sidebarCollapse1"> <i class="fa fa-bars"></i> </a> </div>
+  </div>
+</div>
+	<!--Header End--> 
+
+<div class="slider-bg">   
+  <!-- Banner start-->  
+  <div class="couple-hero-section-img" alt=""></div>
+  
+  <div class="find-section"> 
+    <!-- Find search section-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12 finder-block">
+          <div class="finder-caption">
+            <h2 class="tagline-desktop">Perfect place for your perfect match! </h2>
+          </div>
+          <div class="finder-form-transparent text-left">
+            <h2 class="tagline-mobile">Perfect place for your perfect match!</h2>
+            <form name="login" method="POST" action="#">
+              <div class = "row">
+                <div class="search-section">
+                  <div class="form-group col-md-3 col-sm-3 col-xs-12 no-padding land-lookingfor">
+                    <select name="looking_for" id="Looking" class="custom-select sources" placeholder="Looking for a">
+                      <option value="f" title="Bride" selected>Bride</option>
+                      <option value="m" title="Groom" >Groom</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2 col-sm-2 col-xs-6 no-padding land-agefrom agefromto_mob-w">
+                    <select name="age_from" id="agefrom" class="custom-select sources" placeholder="Age from">
+					  
+                          <option value="18"   title="18 yrs">18 yrs </option>
+
+                            
+                          <option value="19"   title="19 yrs">19 yrs </option>
+
+                            
+                          <option value="20" selected  title="20 yrs">20 yrs </option>
+
+                            
+                          <option value="21"   title="21 yrs">21 yrs </option>
+
+                            
+                          <option value="22"   title="22 yrs">22 yrs </option>
+
+                            
+                          <option value="23"   title="23 yrs">23 yrs </option>
+
+                            
+                          <option value="24"   title="24 yrs">24 yrs </option>
+
+                            
+                          <option value="25"   title="25 yrs">25 yrs </option>
+
+                            
+                          <option value="26"   title="26 yrs">26 yrs </option>
+
+                            
+                          <option value="27"   title="27 yrs">27 yrs </option>
+
+                            
+                          <option value="28"   title="28 yrs">28 yrs </option>
+
+                            
+                          <option value="29"   title="29 yrs">29 yrs </option>
+
+                            
+                          <option value="30"   title="30 yrs">30 yrs </option>
+
+                            
+                          <option value="31"   title="31 yrs">31 yrs </option>
+
+                            
+                          <option value="32"   title="32 yrs">32 yrs </option>
+
+                            
+                          <option value="33"   title="33 yrs">33 yrs </option>
+
+                            
+                          <option value="34"   title="34 yrs">34 yrs </option>
+
+                            
+                          <option value="35"   title="35 yrs">35 yrs </option>
+
+                            
+                          <option value="36"   title="36 yrs">36 yrs </option>
+
+                            
+                          <option value="37"   title="37 yrs">37 yrs </option>
+
+                            
+                          <option value="38"   title="38 yrs">38 yrs </option>
+
+                            
+                          <option value="39"   title="39 yrs">39 yrs </option>
+
+                            
+                          <option value="40"   title="40 yrs">40 yrs </option>
+
+                            
+                          <option value="45"   title="45 yrs">45 yrs </option>
+
+                            
+                          <option value="50"   title="50 yrs">50 yrs </option>
+
+                            
+                          <option value="55"   title="55 yrs">55 yrs </option>
+
+                            
+                          <option value="60"   title="60 yrs">60 yrs </option>
+
+                            
+                          <option value="65"   title="65 yrs">65 yrs </option>
+
+                            
+                          <option value="70"   title="70 yrs">70 yrs </option>
+
+                            
+                          <option value="75"   title="75 yrs">75 yrs </option>
+
+                                                
+                    </select>
+                  </div>
+				  <div class="col-xs-2 agetolabel"><p>to</p></div>
+                  <div class="form-group col-md-2 col-sm-2 col-xs-6 no-padding land-ageto agefromto_mob-w">
+                    <select name="age_to" id="ageto" class="custom-select sources" placeholder="Age to">
+                        
+                          <option value="18"  title="18 yrs" >18 yrs </option>
+
+                            
+                          <option value="19"  title="19 yrs" >19 yrs </option>
+
+                            
+                          <option value="20"  title="20 yrs" >20 yrs </option>
+
+                            
+                          <option value="21"  title="21 yrs" >21 yrs </option>
+
+                            
+                          <option value="22"  title="22 yrs" >22 yrs </option>
+
+                            
+                          <option value="23"  title="23 yrs" >23 yrs </option>
+
+                            
+                          <option value="24"  title="24 yrs" >24 yrs </option>
+
+                            
+                          <option value="25"  title="25 yrs" >25 yrs </option>
+
+                            
+                          <option value="26"  title="26 yrs" >26 yrs </option>
+
+                            
+                          <option value="27"  title="27 yrs" >27 yrs </option>
+
+                            
+                          <option value="28"  title="28 yrs" >28 yrs </option>
+
+                            
+                          <option value="29"  title="29 yrs" >29 yrs </option>
+
+                            
+                          <option value="30" selected title="30 yrs" >30 yrs </option>
+
+                            
+                          <option value="31"  title="31 yrs" >31 yrs </option>
+
+                            
+                          <option value="32"  title="32 yrs" >32 yrs </option>
+
+                            
+                          <option value="33"  title="33 yrs" >33 yrs </option>
+
+                            
+                          <option value="34"  title="34 yrs" >34 yrs </option>
+
+                            
+                          <option value="35"  title="35 yrs" >35 yrs </option>
+
+                            
+                          <option value="36"  title="36 yrs" >36 yrs </option>
+
+                            
+                          <option value="37"  title="37 yrs" >37 yrs </option>
+
+                            
+                          <option value="38"  title="38 yrs" >38 yrs </option>
+
+                            
+                          <option value="39"  title="39 yrs" >39 yrs </option>
+
+                            
+                          <option value="40"  title="40 yrs" >40 yrs </option>
+
+                            
+                          <option value="45"  title="45 yrs" >45 yrs </option>
+
+                            
+                          <option value="50"  title="50 yrs" >50 yrs </option>
+
+                            
+                          <option value="55"  title="55 yrs" >55 yrs </option>
+
+                            
+                          <option value="60"  title="60 yrs" >60 yrs </option>
+
+                            
+                          <option value="65"  title="65 yrs" >65 yrs </option>
+
+                            
+                          <option value="70"  title="70 yrs" >70 yrs </option>
+
+                            
+                          <option value="75"  title="75 yrs" >75 yrs </option>
+
+                                              </select>
+                  </div>
+                  <div class="form-group col-md-3 col-sm-3 col-xs-12 no-padding land-religion">
+                    <select name="religion[]" id="Religion" class="custom-select sources" placeholder="Select Religion">
+                      <option class="list" value='0' title="">Doesn't matter</option>
+                      
+
+                        <option value="739" title="Hindu">Hindu </option>
+                      
+
+                        <option value="744" title="Jain">Jain </option>
+                      
+
+                        <option value="740" title="Muslim">Muslim </option>
+                      
+
+                        <option value="742" title="Sikh">Sikh </option>
+                      
+
+                        <option value="741" title="Christian">Christian </option>
+                      
+
+                        <option value="748" title="Spiritual">Spiritual </option>
+                      
+
+                        <option value="743" title="Parsi">Parsi </option>
+                      
+
+                        <option value="746" title="Jewish">Jewish </option>
+                      
+
+                        <option value="745" title="Buddhist">Buddhist </option>
+                      
+
+                        <option value="1090" title="No Religion">No Religion </option>
+                      
+
+                        <option value="749" title="Other">Other </option>
+                    				
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2 col-sm-2 col-xs-12 no-padding land-search">
+                    <button type="submit" class="btn bor-rmd btn-lg btn-block ripplelink" id="HP_Search_Now">Search</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.Find search section--> 
+</div>
+
+
+
+
+
+<div class="section-space40 bg-light">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="section-title mb30 text-center">
+            <h2>Brides and Grooms Photo Profiles</h2>
+            <p>Search your perfect life-partner from millions of profiles.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        
+		 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 discover-grid">	  
+	<ul id="tabs">
+	     		 
+		  <li><a href="#Bride" class="current">Bride</a></li>
+        <li><a href="#Groom">Groom</a></li>
+		
+       </ul> 
+	   	  	<div id="Bride" class="tab-section" >
+	  
+	 	 <div id="shadow"></div>
+		 
+         <div class="clearfix">&nbsp;</div>
+		<div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+			  
+              			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/bride_1.jpg"> </a>
+              <div class="profile-name">
+                  RCM50051            </div>
+              <div class="info-holder">                 
+                      <span>24</span>                                   
+                  <span>160cm - 5ft 3in</span>                
+                  
+                                    
+                  
+                      <span>Vijayawada</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                  					
+					<a href="#">
+					                    
+							<button class="btn yellow-hollow position-relative" id="showview-626907"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+			 
+              			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/bride_2.jpg"> </a>
+              <div class="profile-name">
+                 RCM50088             </div>
+              <div class="info-holder">                 
+                      <span>33</span>                                   
+                  <span>167cm - 5ft 6in</span>                
+                               
+                  
+                      <span>Machilipatnam</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                  					
+					<a href="#">
+					                    
+							<button class="btn yellow-hollow position-relative" id="showview-623933"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+			   
+              			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/bride_3.jpg"> </a>
+              <div class="profile-name">
+                  RCM50055            </div>
+              <div class="info-holder">                 
+                      <span>29</span>                                   
+                  <span>157cm - 5ft 2in</span>                
+                             
+                  
+                      <span>Hyderabad</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                  					
+					<a href="#">
+					                    
+							<button class="btn yellow-hollow position-relative" id="showview-621625"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+			  
+              			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/bride_4.jpg"> </a>
+              <div class="profile-name">
+                  RCM50019             </div>
+              <div class="info-holder">                 
+                      <span>26</span>                                   
+                  <span>152cm - 5ft</span>                
+                  
+                                    
+                  
+                      <span>Hyderabad</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                  					
+					<a href="#">
+					                    
+							<button class="btn yellow-hollow position-relative" id="showview-619354"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+              
+        </div>
+        <ul class="pagination" id="pagination">
+                  </ul>
+		
+		        </div>
+	  	  </div>
+	
+	
+	
+	 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 discover-grid">
+	  	   <div id="Groom" class="tab-section" style="display:block;" >
+	   		
+			 <div class="clearfix">&nbsp;</div>
+			
+	 <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+             
+                			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/groom_1.jpg"> </a>
+              <div class="profile-name">
+                  RCM50030            </div>
+              <div class="info-holder">                 
+                      <span>30</span>                                   
+                  <span>172cm - 5ft 8in</span>                
+                                
+                  
+                      <span>Hyderabad</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                     					
+					<a href="#">
+					                     
+							<button class="btn yellow-hollow position-relative" id="showview-626516"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+             
+                			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/groom_2.jpg"> </a>
+              <div class="profile-name">
+               RCM50072            </div>
+              <div class="info-holder">                 
+                      <span>26</span>                                   
+                  <span>165cm - 5ft 5in</span>                
+                                 
+                  
+                      <span>Anantapur</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                     					
+					<a href="#">
+					                     
+							<button class="btn yellow-hollow position-relative" id="showview-625952"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+          
+                			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/groom_3.jpg"> </a>
+              <div class="profile-name">
+              RCM50066              </div>
+              <div class="info-holder">                 
+                      <span>29</span>                                   
+                  <span>177cm - 5ft 10in</span>                
+                                 
+                  
+                      <span>Guntur</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                     					
+					<a href="#">
+					                     
+							<button class="btn yellow-hollow position-relative" id="showview-625288"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="matches-holder">
+              <span class="profile_viewed"></span>
+              
+                			 <a href="#">
+			                <img  class="pinkprofileimage" src="assets/images/groom_4.jpg"> </a>
+              <div class="profile-name">
+                  RCM50061            </div>
+              <div class="info-holder">                 
+                      <span>32 </span>                                   
+                  <span>177cm - 5ft 10in</span>                
+                                
+                  
+                      <span>Karimnagar</span>              </div>
+              <div class="gallery">
+               
+                     
+                        
+                     					
+					<a href="#">
+					                     
+							<button class="btn yellow-hollow position-relative" id="showview-625045"><span class="view-full-profile"></span><span class="text">VIEW</span></button></a>
+              </div>
+            </div>  
+          </div> 
+         
+        </div>
+        <ul class="pagination" id="pagination">
+                  </ul>
+		
+		       </div>
+	  	  </div> 
+		
+		
+		
+		
+		
+		
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt30 text-center"> <a href="membership.html" class="btn btn-blue bor-r50 btn-big ripplelink" id="HP_Membership_CTA">View More</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<section class="someone-special">
+    <h1 class="text-center white-text" style="font-size: 36px;">Why Redcarpet Matrimony ?</h1>
+    <div class="row wrapper">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="steps-holder">
+          <div>
+            <span class="step_1"></span>
+            <span class="steps">1</span>
+          </div>
+        </div>
+        <h3 class="white-text">100% Trustworthy</h3>
+        <p>
+          We are highly authentic, 100% trustworthy matrimonial platform. We follow multi-level authentication to ensure genuine profiles.  
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="steps-holder">
+          <div>
+            <span class="step_2"></span>
+            <span class="steps">2</span>
+          </div>
+        </div>
+        <h3 class="white-text">Higher Authentication</h3>
+        <p> 
+        Higher level of verification to keep fake users at bay. We authenticate Aadhaar Card Number through UIDAI to ensure credibility of members.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="steps-holder">
+          <div>
+            <span class="step_3"></span>
+            <span class="steps">3</span>
+          </div>
+        </div>
+        <h3 class="white-text">Better Search & Matches</h3>
+        <p> 
+           Better search results & matches based on your preferences. Search the desired profiles without any hassle & get relevant matches.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="steps-holder">
+          <div>
+            <span class="step_4"></span>
+            <span class="steps">4</span>
+          </div>
+        </div>
+        <h3 class="white-text">Explore & Connect</h3>
+        <p>
+         Explore and connect anytime, anywhere with registered users at your ease. Get access to unlimited profiles & share interest with the one you like.  
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+<!-- Success Stories -->
+<div class="section-space40" ng-app="HomePage"> 
+  <!-- Success Stories Start -->
+  
+  
+  
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1 col-sm-12">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="section-title mb20 text-center">
+            <h2>Over 5 Million Happy Stories</h2>
+            <p>Find inspiration for your Special Day. Yours could be the next Success Story.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row" >
+        
+
+		
+        <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="assets/images/success_img1.jpg" class="img-responsive"></div>
+                        <div class="col-md-9">
+                            <h2>Vikram & Reet</h2>
+                            <p>I am very much thankful to redcarpetmatrimony.com for gifting me a partner for the life time. I belong to Sindhi community and wanted a match from the same caste and same city Vadodara. <br><br>Soon we exchanged numbers and things went well. I am very much happy and blessed to have him in my life now. </p>
+                        </div>
+                    </div>
+                </div>            
+            </div> 
+            <div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="assets/images/success_img2.jpg" class="img-responsive"></div>
+                        <div class="col-md-9">
+                            <h2>Mayuri & Bharat</h2>
+                            <p>I am very much thankful to redcarpetmatrimony.com for gifting me a partner for the life time. I belong to Sindhi community and wanted a match from the same caste and same city Vadodara. <br><br>Soon we exchanged numbers and things went well. I am very much happy and blessed to have him in my life now. </p>
+                        </div>
+                    </div>
+                </div>            
+            </div> 
+            <div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="assets/images/success_img3.jpg" class="img-responsive"></div>
+                        <div class="col-md-9">
+                            <h2>Neema Bansal & Abhinay Singhal</h2>
+                            <p>I am very much thankful to redcarpetmatrimony.com for gifting me a partner for the life time. I belong to Sindhi community and wanted a match from the same caste and same city Vadodara. <br><br>Soon we exchanged numbers and things went well. I am very much happy and blessed to have him in my life now. </p>
+                        </div>
+                    </div>
+                </div>           
+            </div> 
+            <div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="assets/images/success_img4.jpg" class="img-responsive"></div>
+                        <div class="col-md-9">
+                            <h2>Ruchi & Darshak</h2>
+                            <p>I am very much thankful to redcarpetmatrimony.com for gifting me a partner for the life time. I belong to Sindhi community and wanted a match from the same caste and same city Vadodara. <br><br>Soon we exchanged numbers and things went well. I am very much happy and blessed to have him in my life now. </p>
+                        </div>
+                    </div>
+                </div>           
+            </div> 
+			<div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="assets/images/success_img5.jpg" class="img-responsive"></div>
+                        <div class="col-md-9">
+                            <h2>Priyanka & Kunal</h2>
+                            <p>I am very much thankful to redcarpetmatrimony.com for gifting me a partner for the life time. I belong to Sindhi community and wanted a match from the same caste and same city Vadodara. <br><br>Soon we exchanged numbers and things went well. I am very much happy and blessed to have him in my life now. </p>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+			<div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="assets/images/success_img6.jpg" class="img-responsive"></div>
+                        <div class="col-md-9">
+                            <h2>Narender & Ramanpreet</h2>
+                            <p>I am very much thankful to redcarpetmatrimony.com for gifting me a partner for the life time. I belong to Sindhi community and wanted a match from the same caste and same city Vadodara. <br><br>Soon we exchanged numbers and things went well. I am very much happy and blessed to have him in my life now. </p>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        <!-- End Item -->
+        </div>
+        <!-- End Carousel Inner -->
+        <div class="controls">
+            <ul class="nav">
+                <li data-target="#custom_carousel" data-slide-to="0" class="active"><a href="#" class="story_small"><img src="assets/images/success_img1_small.jpg"><small>Vikram & Reet</small></a></li>
+                <li data-target="#custom_carousel" data-slide-to="1"><a href="#" class="story_small"><img src="assets/images/success_img2_small.jpg"><small>Mayuri & Bharat</small></a></li>
+                <li data-target="#custom_carousel" data-slide-to="2"><a href="#" class="story_small"><img src="assets/images/success_img3_small.jpg"><small>Neema Bansal & Abhinay Singhal</small></a></li>
+                <li data-target="#custom_carousel" data-slide-to="3"><a href="#" class="story_small"><img src="assets/images/success_img4_small.jpg"><small>Ruchi & Darshak</small></a></li>
+				<li data-target="#custom_carousel" data-slide-to="4"><a href="#" class="story_small"><img src="assets/images/success_img5_small.jpg"><small>Priyanka & Kunal</small></a></li>
+                <li data-target="#custom_carousel" data-slide-to="5"><a href="#" class="story_small"><img src="assets/images/success_img6_small.jpg"><small>Narender & Ramanpreet</small></a></li>
+            </ul>
+        </div>
+    </div>
+   
+		
+        
+      </div>
+	  
+	  <div class="clearfix">&nbsp;</div>
+      <!-- /.Success Stories center -->
+      <div class="row">
+        <div class="col-md-12 col-sm-12 text-center"> <a href="#" class="btn btn-blue bor-r50 btn-big ripplelink" id="HP_View_Stories">View All Stories</a> </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<section class="footer">
+    <div class="container footer-two">
+    <div class="col-md-12 col-sm-12">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-check"></i> About Us</a></li>
+				<li><a href="#"><i class="fa fa-check"></i> Success Stories</a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-check"></i> Blogs</a></li>
+              </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <h4>Help &amp; Support</h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-check"></i> Live Support</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Online Help - FAQ</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Contact us</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Sitemap</a></li>
+           </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <h4>Policies</h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-check"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Terms of Use</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Disclaimer</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Payment Policy</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <h4>Follow Us</h4>
+         <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">      	      
+	      <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li> <a href="#"><i class="fa fa-twitter"></i></a></li>   
+	      <li> <a href="#"><i class="fa fa-linkedin"></i></a></li> 
+	      <li> <a href="#"><i class="fa fa-pinterest"></i></a></li> 
+          <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
+	  	</ul>
+        </div>
+		<div class="col-md-2 col-sm-6 col-xs-6">           
+        <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">          
+          <li>
+	   <div class="right ">
+		<h4>About Us</h4>
+         
+		<a href="#">There is no better business referral than that is given by a satisfied client.</a>
+		</div> 
+		</li>
+	  	</ul>
+        </div>
+      </div> 
+    </div>
+  </section>
+ 
+ <footer class="tiny-footer"><span>Copyrights 2018, christianmatrimony.com. All Rights Reserved.</span>
+ &nbsp;
+ </footer>
+ <script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js" ></script> 
+ <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script  type="text/javascript" src="assets/app/HomeApp7893.js"></script>  
+ <!-- Login Modal -->
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body"> <a href="javascript:void(0);" class="loginclose" data-dismiss="modal">&times;</a>
+	    <div class="login-form-section">
+          <h2>Login to your account</h2>
+          <p>And begin a beautiful journey</p>
+		  <form method="POST" name="loginfrm" id="loginfrm" action="#">
+           <div class="form-group mt-10">
+            <div class="">
+              <input type="email" name="emailid" id="loginEmail" class="common-input" placeholder="Email Address">
+              <!--<small class="lv-alert alert-danger">Please enter a valid email address</small> --></div>
+          </div>
+          <div class="form-group">
+            <div class="">
+              <input type="password" name="password" id="loginPass" class="common-input" placeholder="Password">
+           <!--   <small class="lv-alert alert-danger">Wrong password. Try again.</small> --></div>
+          </div>
+          <div class="form-group">
+            <div class="">
+              <button type="submit" id="LoginBTN" class="btn btn-lg btn-primary btn-block ripplelink">LOGIN</button>
+            </div>
+          </div>
+		  </form>
+          <div class="login-forgot-link">
+            <ul class="list-inline">
+              <li><a href="#">Forgot Password ?</a></li>
+              <li><a href="#">Resend Activation Email</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <div class="login-or-register"><span class="_43mh">OR</span></div>
+          <div class="login-register-section">
+            <p>Don't have an account?</p>
+            <div class="form-group">
+              <div class="">
+                <a href="#" id="LoginBTN" class="btn btn-lg btn-blue btn-block ripplelink"> REGISTER FREE</a>
+              </div>
+            </div>
+          </div>
+        </div>		
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript">
+   
+	 $('.download-mobile').click(function(){	      
+			window.location.href = urlLink;
+		}); 
+	$('#Mobile_PopUp_Close, #Mobile_PopUp_Continue ').click(function(){
+	    var NORMALSERVER = "";	  
+			$.ajax({
+					    async: true,
+						type: "post",
+					    url: NORMALSERVER+"/common_webservice_controller/download_app",
+					    data:"&dwn_link= 1",						  
+						dataType:"json",						  
+					        success:function(data)
+							{						
+								
+							},
+							error: function(jqXHR, textStatus, errorThrown) {
+								console.log(textStatus, errorThrown);
+							  }
+					 })
+		}); 	
+    });
+	
+	
+	
+	
+	
+	
+	$(document).ready(function(ev){
+    $('#custom_carousel').on('slide.bs.carousel', function (evt) {
+      $('#custom_carousel .controls li.active').removeClass('active');
+      $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
+    })
+});
+	
+	
+	
+	
+</script>      
+
+
+ <script type="text/javascript">
+$(document).ready(function() {
+  $('.tab-section').hide();
+	$('#tabs a').click(function(event){
+		$('#tabs a.current').removeClass('current');
+		$('.tab-section:visible').hide();
+		$(this.hash).show();
+		$(this).addClass('current');
+		event.preventDefault();
+	}).filter(':first').click();	
+	
+	
+	});	
+	
+	
+  </script>
+  
+
+  
+  </body>
+
+</html> 

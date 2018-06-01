@@ -1,0 +1,822 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie ie7 lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie8 lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie ie9 lt-ie10"> <![endif]-->
+<!--[if gte IE 9]><!--> 
+<html class="no-js" prefix="ng: https://angularjs.org"> <!--<![endif]-->
+
+<head> 
+  <meta charset="UTF-8">    
+  <meta name="fragment" content="!" >  
+  <title>Redcarpet Matrimony</title>    
+<meta name="description" content="Red Carpet Matrimony" />
+<meta name="keywords" content="Red Carpet Matrimony" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link rel="icon" href="assets/images/icons/favicon_medium.png" type="image/png" >
+  <script src="assets/js/jquery.min.js"></script>  
+	<link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min7b30.css" media="screen" type="text/css" />   
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-sanitize.js"></script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHCRXG');</script>
+<!-- End Google Tag Manager -->
+    <!--<meta name="google-site-verification" content="oo7O9UcsOzKK9kFQKobRs5-HN5i5ThzaA3y_RlRy8rE" /> -->
+ 
+    <link rel="stylesheet" type="text/css" href="assets/css/style2dac.css?v=21" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+ <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css" type="text/css" />   
+ 
+ 
+   
+<style>
+#slideshow-wrapper {
+  position: absolute;
+  z-index:1;
+  top:60px;
+  left:40px;
+  margin: 50px auto 0;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+#slideshow {
+  position: absolute;
+  list-style-type: none;
+  padding: 0px 16px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#slideshow > * {
+  display: block;
+  position: absolute;
+}
+
+#slideshow img {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ccc;
+  width: 100px;
+  height: 100px;
+}
+
+#slideshow .front {
+  -webkit-transform: translateZ(50px );
+  -moz-transform: translateZ( 50px );
+  -o-transform: translateZ( 50px );
+  transform: translateZ( 50px );
+  opacity: 1;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+#slideshow .right {
+  -webkit-transform: rotateY( 90deg ) translateZ( 100px );
+  -moz-transform: rotateY( 90deg ) translateZ( 100px );
+  -o-transform: rotateY( 90deg ) translateZ( 100px );
+  transform: rotateY( 90deg ) translateZ( 100px );
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+#slideshow .left {
+  -webkit-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  -moz-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  -o-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+@media (max-width:767px) {
+	#slideshow-wrapper {display:block;}
+	
+	#slideshow-wrapper {
+	  position: absolute;
+	  z-index:1;
+	  top:10px;
+	  left:0px;
+	  margin: 70px auto 0;
+	  -webkit-perspective: 1000px;
+	  -moz-perspective: 1000px;
+	  -o-perspective: 1000px;
+	  perspective: 1000px;
+	}
+	#slideshow img {
+		width:70px;
+		height:70px;
+		}
+	
+	
+	}
+
+</style>
+
+
+
+<style>
+#shadow {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #585858;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 6000;
+    display: none; 
+}#dvLoading {
+    background: #F7F6F6 url() no-repeat center center;
+    height: 60px;
+    width: 200px;
+    position: fixed;
+    z-index: 1000000;
+    left: 50%;
+    top: 27%;
+    margin: -25px 0 0 -25px;
+    border-radius: 8px;
+    display: none;
+    font-size: 15px;
+}
+#tabs {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    z-index: 1;
+	border-bottom:1px solid #ccc;
+}
+#tabs li {
+    display: block;
+    float: left;
+    list-style: outside none none;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+#tabs li a.current {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #db670b;
+    font-family: "existencelight";
+    font-size: 18px;
+    outline: 0 none;
+	
+}
+#tabs li a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #f37c20 #f37c20 -moz-use-text-color;
+    border-image: none;
+    border-radius: 7px 7px 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    color: #666666;
+    display: block;
+    font-family: "existencelight";
+    font-size: 18px;
+    outline: 0 none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.show-left{
+	left:20%;
+	float:left;
+	
+}
+.show-right{
+	float:left;
+	left:75%;
+}
+.topshow{
+	width:100%;
+}
+.checkbox ul{
+	padding-left:0px;
+}
+.checkbox ul li{
+padding-bottom:5px;
+}
+@media (min-width: 300px) and (max-width: 420px) {
+   .discover-grid h1{
+	   font-size:12px !important;
+   } 
+  }	
+@media (min-width: 420px) and (max-width: 650px) {
+   .discover-grid h1{
+	   font-size:22px !important;
+   } 
+  }	
+
+  .m1{
+    width: 1000px;
+    padding: 80px 10px 10px 80px;
+  }
+  td{
+   padding: 10px;
+   font-weight: 400;
+   font-size: 13px;
+  padding: 4px;
+
+  }
+  h3{
+    color: red;
+  }
+  .d1 {
+    padding:5px;
+    background-color:#e9e9ee;
+  }
+  .d2 {
+    padding:5px;
+    background-color:#e9e9ee;
+    
+  }
+  .d3 {
+    padding:5px;
+    background-color:#e9e9ee; 
+  }
+  .d4 {
+    padding:5px;
+    background-color:#e9e9ee; 
+  }
+  .d5 {
+    padding:5px;
+   background-color:#e9e9ee;
+   
+  }
+  .d6 {
+    padding:5px;
+    background-color:#e9e9ee;
+    
+  }
+
+</style> 
+
+
+
+ <script type="text/javascript">
+      function slideShow(){
+        // '*' to work with any element, not only 'li's
+        this.slides = $('#slideshow > *'); 
+        this.count = this.slides.length-1;
+        this.initslide = 0;
+        this.auto = null; 
+
+        this.selectTitles();
+        this.ActivateAuto();
+      };
+
+      slideShow.prototype.selectTitles = function(){
+      	var that = this;
+       // $('#slideshow-wrapper').append('<select></select>');
+      /*  $('#slideshow > * > img').each(function(i) {
+            $('select').append('<option val="'+i+'">'+ $( this ).attr('alt') +'</option>');
+          }); 
+        $('select').change(this.onChange.bind(this));*/
+      };
+
+      slideShow.prototype.nextSlide = function(){
+        this.initslide = (this.initslide++ >= this.count) ? 0 : this.initslide++;
+        this.animateSlide();
+        //console.log(this.initslide);
+      };
+
+      slideShow.prototype.animateSlide = function(){ 
+        var currentSlide = this.initslide; 
+        var nextSlide = ((currentSlide+1) > this.count) ? 0 : currentSlide+1;
+        var prevSlide = ((currentSlide-1) < 0) ? this.count - 1 : currentSlide-1;  
+
+        $('#slideshow > *').removeClass().not($('#slideshow > *').filter(function( index ) {
+                  return index === currentSlide || index === nextSlide || index === prevSlide;
+                })).addClass('left');  
+        $('#slideshow > *:eq('+prevSlide+')').addClass('left');
+        $('#slideshow > *:eq('+nextSlide+')').addClass('right');
+        $('#slideshow > *:eq('+currentSlide+')').addClass('front');
+
+        //Animate Dropdown menu
+        //$('select option').removeAttr("selected");
+       // $('select option:eq('+currentSlide+')').prop('selected',true);
+      };
+
+      slideShow.prototype.ActivateAuto = function(){
+        var that = this;
+        this.animateSlide();
+        this.auto = window.setInterval(function () {
+            that.nextSlide();
+        }, 4000);
+      };
+    
+    </script>
+  </head>
+  <body>
+    <!--Header Start-->
+<!-- Sidebar Holder -->
+<nav id="sidebar">
+  <div id="dismiss" class="dismiss"> <i class="fa fa-arrow-right"></i> </div>
+  <ul class="list-unstyled CTAs">
+    <li><a href="#" class="login dismiss" data-toggle="modal" data-target="#loginModal" id="HP_Login_CTA">Login</a></li>
+    <li><a href="registration.html" class="register" id="HP_Banner_Register_CTA">Register Free!</a></li>
+  </ul>
+  <ul class="list-unstyled components">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About us</a></li>
+    <li><a href="#" id="HP_Membership_CTA">Membership Plans</a></li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Contact us</a></li>
+  </ul>
+  <div class="side-feedback">
+    <h3>Give Us Your Feedback</h3>
+    <p> Need any help? Write to us at <a href="mailto:support@redcarpetmatrimony.com">support@redcarpetmatrimony.com</a><br>
+     Call :
+      <a href="tel:+91-124-265 8600">+91-123-456 7890</a> 
+           (India)</p>
+    <h3>Follow us</h3>
+    <ul class="list-inline side-social">
+      <li><a href="#!" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+      <li><a href="#!" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="overlay"></div>
+<div class="header-v2 navbar-fixed-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12 logo">
+        <div class="navbar-brand"> <a href="index.html"><img src="assets/images/logo2.png"  alt="" class="img-responsive"  style="
+    padding: 10px;
+"></a>
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-8 col-xs-2 hidden-xs"> <a class="sidebar-icon btn btn-link" id="sidebarCollapse"> <i class="fa fa-bars"></i> </a>
+        <div class="header-btns">
+          <a href="registration.html"><button type="submit" class="btn btn-primary " id="HP_Banner_Register_CTA">Register Free!</button></a>
+          <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="HP_Login_CTA">Login</button>
+        </div>
+      </div>
+      <a class="sidebar-icon btn btn-link mobile-ham" id="sidebarCollapse1"> <i class="fa fa-bars"></i> </a> </div>
+  </div>
+</div>
+
+  <!--Header End-->
+   
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 col-sm-12">
+
+
+<form name="frmRegister" id="frmRegister" method="POST" action="index.html" >
+    <!--HIDDEN FILEDS-->
+    <input type="hidden" name="trackid1" value="">
+    <input type="hidden" name="addProfileDetails" value="yes">
+    <input type="hidden" name="gothramfeature" value="0">
+    <input type="hidden" name="starfeature" value="0">
+    <input type="hidden" name="religiousfeature" value="1">
+    <input type="hidden" name="ethinicityfeature" value="1">
+    <input type="hidden" name="empinfeature" value="1">
+    <input type="hidden" name="case" value="3HvX4aSj1KuwqKuIZrw=">
+    <input type="hidden" name="partlyId" value="10016420">
+    <input type="hidden" name="campignPartly" value="">
+    <input type="hidden" name="partlyIdCrypt" value="066twb7HhbapjnFYmac=">
+    <input type="hidden" name="_CommunityId" id="communityId" value="2500">
+    <input type="hidden" name="_Name" value="geeta">
+    <input type="hidden" name="_Gender" id="gender" value="2">
+    <input type="hidden" name="_Age" value="21">
+    <input type="hidden" name="_Dob" value="1997-03-12">
+    <input type="hidden" name="_MaritalStatus" value="1">
+    <input type="hidden" name="_Appearance" value="0">
+    <input type="hidden" name="_Religion" value="3">
+    <input type="hidden" name="_ReligionText" value="">
+    <input type="hidden" name="_Denomination" value="21">
+    <input type="hidden" name="_DenominationText" value="">            
+    <input type="hidden" name="_CasteId" value="58">
+    <input type="hidden" name="_CasteText" value="">
+    <input type="hidden" name="_SubCasteId" value="0">
+    <input type="hidden" name="_SubCasteText" value="agni">
+    <input type="hidden" name="_Mother_TongueId" value="1">
+    <input type="hidden" name="_Mother_TongueText" value="">
+    <input type="hidden" name="_Country_Code" value="91">
+    <input type="hidden" name="_ContactMobile" value="91~9864524584">
+    <input type="hidden" name="_Password" value="Qwert123">
+    <input type="hidden" name="_Status" value="0">
+    <input type="hidden" name="_Source_From" value="0">
+    <input type="hidden" name="_Product_Id" value="0">
+    <input type="hidden" name="_DateCreated" value="2018-05-14 13:19:57"> 
+    <input type="hidden" name="_Country" value="98">
+    <input type="hidden" name="_ShowOccupation" value="1">
+    <input type="hidden" name="_Profile_Created_By" value="1" id="profileCreatedBy">
+    <input type="hidden" value="0" name="_Willing_TO_Marry_Divorce">
+    <input type="hidden" name="emaildup" value="">
+    <input type="hidden" name="backto" value="yes">
+        <input type="hidden" name="gasrc" value="reg_homepage">
+    <input type="hidden" name="_Disability" value="">
+    <input type="hidden" name="partlymobileid" value="" id="partlymobileid">
+    <!--HIDDEN FILEDS-->
+   <div class="col-xs-12 col-md-12 col-sm-12 m1">
+      <div style="padding-top:10px;font-weight: 400" class="bigtxt-s text-upper clr36">COMPLETE YOUR PROFILE</div>
+      <div class="clearfix">
+      <div style="font-size: 12px;">Fill few more information to complete your profile and you will be ready to meet your matches.</div>
+      <div style="float: right;margin-top: -20px;color: red;font-weight: 400">STEP 2</div>
+      <div class="d1" style="margin-top: 20px;">
+        <h3>Personal Information</h3>
+        <form>
+          <div>
+          <table>
+            <tr>
+              <td style="padding-right: 80px;">Email*</td>
+              <td>
+                <input type="text" name="" style="width: 450px;">
+              </td>
+            </tr>
+            <tr>
+              <td>Height*</td>
+              <td><div style="border: 1px  solid gray">
+              <select>
+                <option value="0" selected="" title="--- Feet/Inches ---" alt="--- Feet/Inches ---">--------------------------------------------- Feet/Inches --------------------------------------</option><option value="121.92" title="4 feet" alt="4 feet">4 feet</option><option value="124.46" title="4 feet 1 inches" alt="4 feet 1 inches">4 feet 1 inches</option><option value="127.00" title="4 feet 2 inches" alt="4 feet 2 inches">4 feet 2 inches</option><option value="129.54" title="4 feet 3 inches" alt="4 feet 3 inches">4 feet 3 inches</option><option value="132.08" title="4 feet 4 inches" alt="4 feet 4 inches">4 feet 4 inches</option><option value="134.62" title="4 feet 5 inches" alt="4 feet 5 inches">4 feet 5 inches</option><option value="137.16" title="4 feet 6 inches" alt="4 feet 6 inches">4 feet 6 inches</option><option value="139.70" title="4 feet 7 inches" alt="4 feet 7 inches">4 feet 7 inches</option><option value="142.24" title="4 feet 8 inches" alt="4 feet 8 inches">4 feet 8 inches</option><option value="144.78" title="4 feet 9 inches" alt="4 feet 9 inches">4 feet 9 inches</option><option value="147.32" title="4 feet 10 inches" alt="4 feet 10 inches">4 feet 10 inches</option><option value="149.86" title="4 feet 11 inches" alt="4 feet 11 inches">4 feet 11 inches</option><option value="152.40" title="5 feet" alt="5 feet">5 feet</option><option value="154.94" title="5 feet 1 inches" alt="5 feet 1 inches">5 feet 1 inches</option><option value="157.48" title="5 feet 2 inches" alt="5 feet 2 inches">5 feet 2 inches</option><option value="160.02" title="5 feet 3 inches" alt="5 feet 3 inches">5 feet 3 inches</option><option value="162.56" title="5 feet 4 inches" alt="5 feet 4 inches">5 feet 4 inches</option><option value="165.10" title="5 feet 5 inches" alt="5 feet 5 inches">5 feet 5 inches</option><option value="167.64" title="5 feet 6 inches" alt="5 feet 6 inches">5 feet 6 inches</option><option value="170.18" title="5 feet 7 inches" alt="5 feet 7 inches">5 feet 7 inches</option><option value="172.72" title="5 feet 8 inches" alt="5 feet 8 inches">5 feet 8 inches</option><option value="175.26" title="5 feet 9 inches" alt="5 feet 9 inches">5 feet 9 inches</option><option value="177.80" title="5 feet 10 inches" alt="5 feet 10 inches">5 feet 10 inches</option><option value="180.34" title="5 feet 11 inches" alt="5 feet 11 inches">5 feet 11 inches</option><option value="182.88" title="6 feet" alt="6 feet">6 feet</option><option value="185.42" title="6 feet 1 inches" alt="6 feet 1 inches">6 feet 1 inches</option><option value="187.96" title="6 feet 2 inches" alt="6 feet 2 inches">6 feet 2 inches</option><option value="190.50" title="6 feet 3 inches" alt="6 feet 3 inches">6 feet 3 inches</option><option value="193.04" title="6 feet 4 inches" alt="6 feet 4 inches">6 feet 4 inches</option><option value="195.58" title="6 feet 5 inches" alt="6 feet 5 inches">6 feet 5 inches</option><option value="198.12" title="6 feet 6 inches" alt="6 feet 6 inches">6 feet 6 inches</option><option value="200.66" title="6 feet 7 inches" alt="6 feet 7 inches">6 feet 7 inches</option><option value="203.20" title="6 feet 8 inches" alt="6 feet 8 inches">6 feet 8 inches</option><option value="205.74" title="6 feet 9 inches" alt="6 feet 9 inches">6 feet 9 inches</option><option value="208.28" title="6 feet 10 inches" alt="6 feet 10 inches">6 feet 10 inches</option><option value="210.82" title="6 feet 11 inches" alt="6 feet 11 inches">6 feet 11 inches</option><option value="213.36" title="7 feet" alt="7 feet">7 feet</option><option value="215.90" title="7 feet 1 inches" alt="7 feet 1 inches">7 feet 1 inches</option><option value="218.44" title="7 feet 2 inches" alt="7 feet 2 inches">7 feet 2 inches</option><option value="220.98" title="7 feet 3 inches" alt="7 feet 3 inches">7 feet 3 inches</option><option value="223.52" title="7 feet 4 inches" alt="7 feet 4 inches">7 feet 4 inches</option><option value="226.06" title="7 feet 5 inches" alt="7 feet 5 inches">7 feet 5 inches</option><option value="228.60" title="7 feet 6 inches" alt="7 feet 6 inches">7 feet 6 inches</option><option value="231.14" title="7 feet 7 inches" alt="7 feet 7 inches">7 feet 7 inches</option><option value="233.68" title="7 feet 8 inches" alt="7 feet 8 inches">7 feet 8 inches</option><option value="236.22" title="7 feet 9 inches" alt="7 feet 9 inches">7 feet 9 inches</option><option value="238.76" title="7 feet 10 inches" alt="7 feet 10 inches">7 feet 10 inches</option><option value="241.30" title="7 feet 11 inches" alt="7 feet 11 inches">7 feet 11 inches</option>
+              </select></div>
+            </td>
+            </tr>
+            <tr>
+              <td>Physical Status*</td>
+              <td>
+                <input type="radio" name="physical_status">Normal &nbsp;&nbsp;
+                <input type="radio" name="physical_status">Physically Challenged
+              </td>
+            </tr>
+          </table>
+        </div></div></div>
+          <div class="clear"><!-- --></div>
+          <div class="col-xs-12 col-md-12 col-sm-12 d2" style="margin-top: 20px;">
+          <h3>Location Information</h3>
+          <div>
+          <table>
+            <tr>
+              <td style="padding-right: 80px;width: ">Country Living In</td>
+              <td>India</td>
+            </tr>
+            <tr>
+              <td>Resident State</td>
+              <td><div style="border: 1px  solid gray; width:445px;">
+                <select >
+                  <option value="0">----------------------------------------------Select---------------------------------------------</option><option value="1" title="Andaman &amp; Nicobar" alt="Andaman &amp; Nicobar">Andaman &amp; Nicobar</option><option value="2" title="Andhra Pradesh" alt="Andhra Pradesh">Andhra Pradesh</option><option value="3" title="Arunachal Pradesh" alt="Arunachal Pradesh">Arunachal Pradesh</option><option value="4" title="Assam" alt="Assam">Assam</option><option value="5" title="Bihar" alt="Bihar">Bihar</option><option value="6" title="Chandigarh" alt="Chandigarh">Chandigarh</option><option value="7" title="Chhattisgarh" alt="Chhattisgarh">Chhattisgarh</option><option value="8" title="Dadra &amp; Nagar Haveli" alt="Dadra &amp; Nagar Haveli">Dadra &amp; Nagar Haveli</option><option value="9" title="Daman &amp; Diu" alt="Daman &amp; Diu">Daman &amp; Diu</option><option value="10" title="Delhi" alt="Delhi">Delhi</option><option value="11" title="Goa" alt="Goa">Goa</option><option value="12" title="Gujarat" alt="Gujarat">Gujarat</option><option value="13" title="Haryana" alt="Haryana">Haryana</option><option value="14" title="Himachal Pradesh" alt="Himachal Pradesh">Himachal Pradesh</option><option value="15" title="Jammu &amp; Kashmir" alt="Jammu &amp; Kashmir">Jammu &amp; Kashmir</option><option value="16" title="Jharkand" alt="Jharkand">Jharkand</option><option value="17" title="Karnataka" alt="Karnataka">Karnataka</option><option value="18" title="Kerala" alt="Kerala">Kerala</option><option value="19" title="Lakshadeep" alt="Lakshadeep">Lakshadeep</option><option value="20" title="Madhya Pradesh" alt="Madhya Pradesh">Madhya Pradesh</option><option value="21" title="Maharashtra" alt="Maharashtra">Maharashtra</option><option value="22" title="Manipur" alt="Manipur">Manipur</option><option value="23" title="Meghalaya" alt="Meghalaya">Meghalaya</option><option value="24" title="Mizoram" alt="Mizoram">Mizoram</option><option value="25" title="Nagaland" alt="Nagaland">Nagaland</option><option value="26" title="Odisha" alt="Odisha">Odisha</option><option value="27" title="Pondicherry" alt="Pondicherry">Pondicherry</option><option value="28" title="Punjab" alt="Punjab">Punjab</option><option value="29" title="Rajasthan" alt="Rajasthan">Rajasthan</option><option value="30" title="Sikkim" alt="Sikkim">Sikkim</option><option value="31" title="Tamil Nadu" alt="Tamil Nadu">Tamil Nadu</option><option value="36" title="Telangana" alt="Telangana">Telangana</option><option value="32" title="Tripura" alt="Tripura">Tripura</option><option value="33" title="Uttar Pradesh" alt="Uttar Pradesh">Uttar Pradesh</option><option value="34" title="Uttarakhand" alt="Uttarakhand">Uttarakhand</option><option value="35" title="West Bengal" alt="West Bengal">West Bengal</option>                
+
+              </select></div>
+            </td>
+            </tr>
+            <tr>
+              <td>Resident City*</td>
+              <td><div style="border: 1px  solid gray ; width:445px;">
+                <select id="residingCityId" name="residingCityId" tabindex="-1" class="select2_single select2-hidden-accessible" aria-hidden="true">
+                  <option value="0">-------------------------------------------Select------------------------------------------------</option>               </select>
+              </td></div>
+            </tr>
+            <tr>
+              <td>Citizenship</td>
+              <td><div style="border: 1px  solid gray ; width:445px;">
+                <select id="citizenship" name="citizenship" tabindex="-1" class="select2_single select2-hidden-accessible" onchange="citizenshipValueChk();autotab('','residentstatus','select');" aria-hidden="true"><option value="0">------------------------------------------------Select-------------------------------------------</option>
+                    <option value="98" selected="">India</option>
+                    <option value="222">United States of America</option>
+                    <option value="220">United Arab Emirates</option>
+                    <option value="129">Malaysia</option>
+                    <option value="221">United Kingdom</option>
+                    <option value="13">Australia</option>
+                    <option value="185">Saudi Arabia</option>
+                    <option value="39">Canada</option>
+                    <option value="189">Singapore</option>
+                    <option value="114">Kuwait</option>
+                    <option value="">-------------------------</option>
+                  </select>
+              </td></div>
+            </tr>
+
+          </table>
+        </div></td></tr></td></tr></table></div>
+
+        <div class="clear"><!-- --></div>
+        <div class="col-xs-12 col-md-12 col-sm-12 d3" style="margin-top: 20px;">
+        <h3>Religious Information</h3>
+        <div>
+        <table>
+          <tr>
+            <td style="padding-right: 80px;width: ">Division</td>
+            <td>BCB</td>
+          </tr>
+          <tr>
+            <td>Wiling to marry from</td>
+            <td><input type="radio" name="marry">Normal &nbsp;&nbsp;
+              <input type="radio" name="marry">Physically Challenged
+            </td>
+            
+          </tr>
+          <tr>
+            <td>Religious value</td>
+            <td><div style="border: 1px  solid gray ; width:445px;">
+              <select id="religious" name="religious" class="select2_single select2-hidden-accessible" tabindex="-1" onchange="autotab('','educationCategory','select')" aria-hidden="true">
+            <option value="0" selected="" title="Select" alt="Select">------------------------------------------------Select-------------------------------------------</option><option value="7" title="Very religious" alt="Very religious">Very religious</option><option value="8" title="Believe in Jesus not in religion" alt="Believe in Jesus not in religion">Believe in Jesus not in religion</option><option value="9" title="Sunday Church Goer" alt="Sunday Church Goer">Sunday Church Goer</option><option value="10" title="Average Christian" alt="Average Christian">Average Christian</option><option value="11" title="Not religious" alt="Not religious">Not religious</option><option value="99" title="Not given it a thought" alt="Not given it a thought">Not given it a thought</option>            </select>
+            </td></div>
+          </tr>
+
+        </table>
+      </div></td></tr></table></div>
+
+
+      <div class="clear"><!-- --></div>
+          <div class="col-xs-12 col-md-12 col-sm-12 d4" style="margin-top: 20px;">
+          <h3>Education & Profession</h3>
+          <div>
+          <table>
+            <tr>
+              <td>Highest Education</td>
+              <td><div style="border: 1px  solid gray">
+                <select id="residingState" class="select2_single select2-hidden-accessible" name="residingState" tabindex="-1" onchange="funCityCall(6);" aria-hidden="true">
+                  <option value="0" selected="" title="---Select---" alt="---Select---">-----------------------------------------------------Select--------------------------------------------------</option><option value="1" title="Andaman &amp; Nicobar" alt="Andaman &amp; Nicobar">Andaman &amp; Nicobar</option><option value="2" title="Andhra Pradesh" alt="Andhra Pradesh">Andhra Pradesh</option><option value="3" title="Arunachal Pradesh" alt="Arunachal Pradesh">Arunachal Pradesh</option><option value="4" title="Assam" alt="Assam">Assam</option><option value="5" title="Bihar" alt="Bihar">Bihar</option><option value="6" title="Chandigarh" alt="Chandigarh">Chandigarh</option><option value="7" title="Chhattisgarh" alt="Chhattisgarh">Chhattisgarh</option><option value="8" title="Dadra &amp; Nagar Haveli" alt="Dadra &amp; Nagar Haveli">Dadra &amp; Nagar Haveli</option><option value="9" title="Daman &amp; Diu" alt="Daman &amp; Diu">Daman &amp; Diu</option><option value="10" title="Delhi" alt="Delhi">Delhi</option><option value="11" title="Goa" alt="Goa">Goa</option><option value="12" title="Gujarat" alt="Gujarat">Gujarat</option><option value="13" title="Haryana" alt="Haryana">Haryana</option><option value="14" title="Himachal Pradesh" alt="Himachal Pradesh">Himachal Pradesh</option><option value="15" title="Jammu &amp; Kashmir" alt="Jammu &amp; Kashmir">Jammu &amp; Kashmir</option><option value="16" title="Jharkand" alt="Jharkand">Jharkand</option><option value="17" title="Karnataka" alt="Karnataka">Karnataka</option><option value="18" title="Kerala" alt="Kerala">Kerala</option><option value="19" title="Lakshadeep" alt="Lakshadeep">Lakshadeep</option><option value="20" title="Madhya Pradesh" alt="Madhya Pradesh">Madhya Pradesh</option><option value="21" title="Maharashtra" alt="Maharashtra">Maharashtra</option><option value="22" title="Manipur" alt="Manipur">Manipur</option><option value="23" title="Meghalaya" alt="Meghalaya">Meghalaya</option><option value="24" title="Mizoram" alt="Mizoram">Mizoram</option><option value="25" title="Nagaland" alt="Nagaland">Nagaland</option><option value="26" title="Odisha" alt="Odisha">Odisha</option><option value="27" title="Pondicherry" alt="Pondicherry">Pondicherry</option><option value="28" title="Punjab" alt="Punjab">Punjab</option><option value="29" title="Rajasthan" alt="Rajasthan">Rajasthan</option><option value="30" title="Sikkim" alt="Sikkim">Sikkim</option><option value="31" title="Tamil Nadu" alt="Tamil Nadu">Tamil Nadu</option><option value="36" title="Telangana" alt="Telangana">Telangana</option><option value="32" title="Tripura" alt="Tripura">Tripura</option><option value="33" title="Uttar Pradesh" alt="Uttar Pradesh">Uttar Pradesh</option><option value="34" title="Uttarakhand" alt="Uttarakhand">Uttarakhand</option><option value="35" title="West Bengal" alt="West Bengal">West Bengal</option>                
+
+              </select></div>
+            </td>
+            <tr>
+              <td>Employed IN*</td>
+              <td>
+                <input type="radio" name="Employed">Government &nbsp;&nbsp;
+                <input type="radio" name="Employed">Defence &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="Employed">Private &nbsp;&nbsp;<br>
+                <input type="radio" name="Employed">Business &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="Employed">Self Employed &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="Employed">NotWorking 
+              </td>
+            </tr>
+        </table>
+      </div></tr></table></div>
+
+
+
+      <div class="clear"><!-- --></div>
+          <div class="col-xs-12 col-md-12 col-sm-12 d5" style="margin-top: 20px;">
+          <h3>Family Information</h3>
+          <div>
+          <table>
+            <tr>
+              <td>Perent's Contact No.</td>
+              <td>
+                <input style="width:300px" type="text" name="" placeholder="            Mobile No./Landline No."><span>optional but recomended</span>
+            </td>
+            <tr>
+              <td>Family Vaue</td>
+              <td>
+                <input type="radio" name="family_value">Orthodox &nbsp;&nbsp;
+                <input type="radio" name="family_value">Traditional &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="family_value">Modarate &nbsp;&nbsp;<br>
+                <input type="radio" name="family_value">Libiral &nbsp;&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td>Family Type</td>
+              <td>
+                <input type="radio" name="family_type">Joint Family &nbsp;&nbsp;
+                <input type="radio" name="family_type">Nuclear Family &nbsp;&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td>Family Status</td>
+              <td>
+                <input type="radio" name="family_status">Middle Class &nbsp;&nbsp;
+                <input type="radio" name="family_status">Upper Middle Class &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="family_status">Rich /Affluent &nbsp;&nbsp;<br>
+                
+              </td>
+            </tr>
+            <tr>
+              <td>Ethinicity</td>
+              <td>
+                <div style="border: 1px  solid gray; width:445px;">
+                <select>
+                  <option value="0">-------------------------------------------------------Select------------------------------------</option><option value="0" selected="" title="Select" alt="Select">Select</option><option value="1" title="African" alt="African">African</option><option value="2" title="Asian" alt="Asian">Asian</option><option value="3" title="Caribbean" alt="Caribbean">Caribbean</option><option value="4" title="East indian" alt="East indian">East indian</option><option value="5" title="Middle-eastern" alt="Middle-eastern">Middle-eastern</option><option value="6" title="Pacific islands" alt="Pacific islands">Pacific islands</option><option value="7" title="Arab" alt="Arab">Arab</option><option value="8" title="Black/African descent" alt="Black/African descent">Black/African descent</option><option value="9" title="Caucasian/white" alt="Caucasian/white">Caucasian/white</option><option value="10" title="Hispanic/Latino" alt="Hispanic/Latino">Hispanic/Latino</option><option value="11" title="Native american" alt="Native american">Native american</option><option value="12" title="South asian" alt="South asian">South asian</option>
+              </select></div>
+              </td>
+            </tr>
+        </table>
+      </div></tr></table></div>
+      <div class="clear"><!-- --></div>
+          <div class="d6" style="margin-top: 20px;">
+          <h3>About me</h3>
+          <textarea style="width: 600px;height: 100px">
+            
+          </textarea>
+          <p style="font-size: 12px">Min 50 characters<span style="padding-left:400px;">0 Characters typed</span></p>
+          </div></div></div></div></div></div></div></div>
+        
+<div style="text-align: center;padding: 10px;">
+     <input style="text-align: center;border-radius: 0px;background-color: green;" type="submit" name="" value="COMPLETE REGISTRATION">
+   </div>
+   </form></div></div>
+
+
+<section class="footer">
+    <div class="container footer-two">
+    <div class="col-md-12 col-sm-12">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-check"></i> About Us</a></li>
+        <li><a href="#"><i class="fa fa-check"></i> Success Stories</a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-check"></i> Blogs</a></li>
+              </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <h4>Help &amp; Support</h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-check"></i> Live Support</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Online Help - FAQ</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Contact us</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Sitemap</a></li>
+           </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <h4>Policies</h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-check"></i> Privacy Policy</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Terms of Use</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Disclaimer</a></li>
+                <li><a href="#"><i class="fa fa-check"></i> Payment Policy</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <h4>Follow Us</h4>
+         <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">              
+        <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li> <a href="#"><i class="fa fa-twitter"></i></a></li>   
+        <li> <a href="#"><i class="fa fa-linkedin"></i></a></li> 
+        <li> <a href="#"><i class="fa fa-pinterest"></i></a></li> 
+          <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
+      </ul>
+        <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+        <h4>App Available on</h4>             
+        <li> <a href="#"><i class="fa fa-android"></i></a></li>
+          <li> <a href="#"><i class="fa fa-apple"></i></a></li>
+      </ul>
+        </div>
+    <div class="col-md-2 col-sm-6 col-xs-6">           
+        <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">          
+          <li>
+     <div class="right ">
+    <h4>About Us</h4>
+         
+    <a href="#">There is no better business referral than that is given by a satisfied client.</a>
+    </div> 
+    </li>
+      </ul>
+        </div>
+      </div> 
+    </div>
+  </section>
+ 
+ <footer class="tiny-footer"><span>Copyrights 2018, christianmatrimony.com. All Rights Reserved.</span>
+ &nbsp;
+ </footer>
+ <script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js" ></script> 
+ <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script  type="text/javascript" src="assets/app/HomeApp7893.js"></script>  
+ <!-- Login Modal -->
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body"> <a href="javascript:void(0);" class="loginclose" data-dismiss="modal">&times;</a>
+      <div class="login-form-section">
+          <h2>Login to your account</h2>
+          <p>And begin a beautiful journey</p>
+      <form method="POST" name="loginfrm" id="loginfrm" action="#">
+           <div class="form-group mt-10">
+            <div class="">
+              <input type="email" name="emailid" id="loginEmail" class="common-input" placeholder="Email Address">
+              <!--<small class="lv-alert alert-danger">Please enter a valid email address</small> --></div>
+          </div>
+          <div class="form-group">
+            <div class="">
+              <input type="password" name="password" id="loginPass" class="common-input" placeholder="Password">
+           <!--   <small class="lv-alert alert-danger">Wrong password. Try again.</small> --></div>
+          </div>
+          <div class="form-group">
+            <div class="">
+              <button type="submit" id="LoginBTN" class="btn btn-lg btn-primary btn-block ripplelink">LOGIN</button>
+            </div>
+          </div>
+      </form>
+          <div class="login-forgot-link">
+            <ul class="list-inline">
+              <li><a href="#">Forgot Password ?</a></li>
+              <li><a href="#">Resend Activation Email</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <div class="login-or-register"><span class="_43mh">OR</span></div>
+          <div class="login-register-section">
+            <p>Don't have an account?</p>
+            <div class="form-group">
+              <div class="">
+                <a href="#" id="LoginBTN" class="btn btn-lg btn-blue btn-block ripplelink"> REGISTER FREE</a>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript">
+   
+   $('.download-mobile').click(function(){        
+      window.location.href = urlLink;
+    }); 
+  $('#Mobile_PopUp_Close, #Mobile_PopUp_Continue ').click(function(){
+      var NORMALSERVER = "";    
+      $.ajax({
+              async: true,
+            type: "post",
+              url: NORMALSERVER+"/common_webservice_controller/download_app",
+              data:"&dwn_link= 1",              
+            dataType:"json",              
+                  success:function(data)
+              {           
+                
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+                }
+           })
+    });   
+    });
+  
+  
+  
+  
+  
+  
+  $(document).ready(function(ev){
+    $('#custom_carousel').on('slide.bs.carousel', function (evt) {
+      $('#custom_carousel .controls li.active').removeClass('active');
+      $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
+    })
+});
+  
+  
+  
+  
+</script>      
+
+
+ <script type="text/javascript">
+$(document).ready(function() {
+  $('.tab-section').hide();
+  $('#tabs a').click(function(event){
+    $('#tabs a.current').removeClass('current');
+    $('.tab-section:visible').hide();
+    $(this.hash).show();
+    $(this).addClass('current');
+    event.preventDefault();
+  }).filter(':first').click();  
+  
+  
+  }); 
+  
+  
+  </script>
+  
+
+  
+  </body>
+
+</html> 

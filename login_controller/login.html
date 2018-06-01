@@ -1,0 +1,762 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie ie7 lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie8 lt-ie10" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie ie9 lt-ie10"> <![endif]-->
+<!--[if gte IE 9]><!--> <html class="no-js" prefix="ng: https://angularjs.org"> <!--<![endif]-->
+
+<!-- Mirrored from www.lovevivah.com/login_controller/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Feb 2018 16:28:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head> 
+  <meta charset="UTF-8">    
+  <meta name="fragment" content="!" >  
+  <title>Validate Login, Sign In Matrimonial Profile, Search Brides and Grooms - Lovevivah </title>    
+<meta name="description" content="Login to LoveVivah.com matrimony site for free and search partner profile for marriage. Find verified profiles brides and grooms from community, profession and cities in India" />
+<meta name="keywords" content="Validate Login, Login matrimonial profile, Matrimony sign in, Matrimonial Registration, marriage profile, lovevivah.com" />
+
+
+
+
+
+
+
+
+
+
+ 
+  <meta name="referrer" content="origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="google-site-verification" content="oo7O9UcsOzKK9kFQKobRs5-HN5i5ThzaA3y_RlRy8rE" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link rel="icon" href="../assets/images/icons/favicon_medium.png" type="image/png" >
+  <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  
+	<link rel="stylesheet" href="../assets/css/bootstrap/css/bootstrap.min7b30.css?v=4" media="screen" type="text/css" />   
+    <script src="../assets/js/angular.min.js"></script>
+    <script src="../assets/js/angular-sanitize.js"></script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHCRXG');</script>
+<!-- End Google Tag Manager -->
+    <!--<meta name="google-site-verification" content="oo7O9UcsOzKK9kFQKobRs5-HN5i5ThzaA3y_RlRy8rE" /> -->
+    <link rel="canonical" href="login.html" /> 
+
+ 
+    <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/override4290.css?v=25" media="screen" type="text/css" /> 
+  <link rel="stylesheet" href="../assets/css/custom8d0c.css?v=26" media="screen" type="text/css" />
+  
+<style>
+#slideshow-wrapper {
+  position: absolute;
+  z-index:1;
+  top:60px;
+  left:40px;
+  margin: 50px auto 0;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+#slideshow {
+  position: absolute;
+  list-style-type: none;
+  padding: 0px 16px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#slideshow > * {
+  display: block;
+  position: absolute;
+}
+
+#slideshow img {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ccc;
+  width: 100px;
+  height: 100px;
+}
+
+#slideshow .front {
+  -webkit-transform: translateZ(50px );
+  -moz-transform: translateZ( 50px );
+  -o-transform: translateZ( 50px );
+  transform: translateZ( 50px );
+  opacity: 1;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+#slideshow .right {
+  -webkit-transform: rotateY( 90deg ) translateZ( 100px );
+  -moz-transform: rotateY( 90deg ) translateZ( 100px );
+  -o-transform: rotateY( 90deg ) translateZ( 100px );
+  transform: rotateY( 90deg ) translateZ( 100px );
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+#slideshow .left {
+  -webkit-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  -moz-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  -o-transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  transform: rotateY( -90deg ) translateZ( 10px ) translateX(-360px);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  -o-transition: -o-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+@media (max-width:767px) {
+	#slideshow-wrapper {display:block;}
+	
+	#slideshow-wrapper {
+	  position: absolute;
+	  z-index:1;
+	  top:10px;
+	  left:0px;
+	  margin: 70px auto 0;
+	  -webkit-perspective: 1000px;
+	  -moz-perspective: 1000px;
+	  -o-perspective: 1000px;
+	  perspective: 1000px;
+	}
+	#slideshow img {
+		width:70px;
+		height:70px;
+		}
+	
+	
+	}
+
+</style>
+ <script type="text/javascript">
+      function slideShow(){
+        // '*' to work with any element, not only 'li's
+        this.slides = $('#slideshow > *'); 
+        this.count = this.slides.length-1;
+        this.initslide = 0;
+        this.auto = null; 
+
+        this.selectTitles();
+        this.ActivateAuto();
+      };
+
+      slideShow.prototype.selectTitles = function(){
+      	var that = this;
+       // $('#slideshow-wrapper').append('<select></select>');
+      /*  $('#slideshow > * > img').each(function(i) {
+            $('select').append('<option val="'+i+'">'+ $( this ).attr('alt') +'</option>');
+          }); 
+        $('select').change(this.onChange.bind(this));*/
+      };
+
+      slideShow.prototype.nextSlide = function(){
+        this.initslide = (this.initslide++ >= this.count) ? 0 : this.initslide++;
+        this.animateSlide();
+        //console.log(this.initslide);
+      };
+
+      slideShow.prototype.animateSlide = function(){ 
+        var currentSlide = this.initslide; 
+        var nextSlide = ((currentSlide+1) > this.count) ? 0 : currentSlide+1;
+        var prevSlide = ((currentSlide-1) < 0) ? this.count - 1 : currentSlide-1;  
+
+        $('#slideshow > *').removeClass().not($('#slideshow > *').filter(function( index ) {
+                  return index === currentSlide || index === nextSlide || index === prevSlide;
+                })).addClass('left');  
+        $('#slideshow > *:eq('+prevSlide+')').addClass('left');
+        $('#slideshow > *:eq('+nextSlide+')').addClass('right');
+        $('#slideshow > *:eq('+currentSlide+')').addClass('front');
+
+        //Animate Dropdown menu
+        //$('select option').removeAttr("selected");
+       // $('select option:eq('+currentSlide+')').prop('selected',true);
+      };
+
+      slideShow.prototype.ActivateAuto = function(){
+        var that = this;
+        this.animateSlide();
+        this.auto = window.setInterval(function () {
+            that.nextSlide();
+        }, 4000);
+      };
+    
+    </script>
+  </head>
+<body>
+<noscript>
+<div class="noscript colrw boxshadow">You have not enabled Javascript on your browser, please enable it to use the website</div>
+</noscript>
+
+<!--Header Start-->
+	<nav class="navbar navbar-default navbar-fixed-top lv-nav" ng-controller="headerController"> 
+		<div class="container-fluid top-nav"><span class="top-trust pull-left"><label class="label label-warning">OFFER</label> Build 90% or above Trust Score & Get FLAT 50% off*</span><span class="top-trust pull-right">Call +91-124-265 8600 (India) | <a href="mailto:support@lovevivah.com">support@lovevivah.com</a> | <a href="../help-support.html">Live Support</a></span></div>
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			   <a href="../index.html" class="navbar-brand">
+					<img style="max-width:150px; margin-top: -7px;" src="../assets/images/logo_250.png">
+				</a>          
+			</div>		
+			<div class="mainmenu-lv">		
+				<div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+				  <ul class="nav navbar-nav navbar-right">		  
+					<li class="non-log-dropdown">
+					  <a href="../search_controller/basic_search.html">SEARCH</a>
+					</li>
+					<li><a href="../registration.html">FREE REGISTER</a></li>
+					<li><a href="../membership.html">MEMBERSHIP</a></li> 
+					<li><a href="login.html">FREE HOROSCOPE</a></li>  
+					<li><a href="../help-support.html">HELP</a></li>
+										   <li><a href="login.html">LOGIN</a></li>
+									
+				  </ul>
+				 </div>	
+			</div>      
+		  </div>      
+	</nav>
+	
+ <div class="col-md-12 no-padding aadhar_verfy_strip" style="padding:0px;margin-bottom:10px;">
+     <div class="row main-white-container search-heading">
+     <div class="col-md-6 no-padding col-md-offset-4"><span><img src="../assets/images/aadhaar_logo.png" class="img-responsive"  alt=""/></span>
+     <p class="text-center">
+India&#8217;s 1st Matrimonial platform linked with Aadhaar</p></div>     
+     </div>
+    </div>
+ 
+ 
+  
+	<!--Header End--> 
+<script>
+window.onload = function () {
+	if (document.getElementById("emailid").value == "")
+	{
+		document.getElementById("emailid").focus();
+	} else
+	{
+		document.getElementById("password").focus();
+	}
+};
+</script>
+<div class="main page-bg">
+	<div class="container mobile-padding-lr0">  
+		<div class="col-md-8 col-md-offset-2 col-sm-12 no-padding-sm">
+			<div class="col-md-12 loginpage-container">
+				<div class="col-md-6 no-padding">
+					<div class="loginpage-leftimg hidden-xs"><img src="../assets/images/loginpage-banner.jpg" class="img-responsive" alt="Lovevivah banner"/></div>
+				</div>
+				
+				<div class="col-md-6 no-padding logintoggle">
+					<form name="loginfrm" id="loginfrm" action="https://www.lovevivah.com/login_controller/validate_login" method="POST" >
+						<div class="login-page-section">
+														<small class="loginpage-alert lv-alert alert-success text-center" style="display:none;font-weight: 600;">
+															</small>
+														<h2>Login to your account</h2>
+							<p>And begin a beautiful journey</p>
+							<div class="form-group mt-10">
+								<div class="src_field_box">
+									<input type="email" id="emailid"  name="emailid" value="" class="login-page-input" placeholder="Email Address">
+									<small class="lv-alert alert-danger" style='display:none'></small> 
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="src_field_box">
+									<input type="password" id="password"  name="password" class="login-page-input" placeholder="Password" data-valid="required">
+									<small class="lv-alert alert-danger" style='display:none'></small>
+								</div>
+							</div>
+							<input type="hidden" name="emailidfor" value="">
+							<input type="hidden" name="emaillinktype" value="">
+							<input type="hidden" name="getpreurl" value="login.html">
+							<input type="hidden" name="auser" value=>
+							<div class="form-group">
+								<div class="src_field_box">
+								  <button type="submit" onclick="Home.login(event);" id="LoginBTN" class="btn btn-lg btn-primary btn-block ripplelink">LOGIN</button>
+								</div>
+							</div>
+							<div class="login-forgot-link" style="">
+								<ul class="list-inline">
+									<li><a href="javascrip:void(0);" id="showforgotpass">Forgot Password?</a></li>
+									<li><a href="javascrip:void(0);" id="reactitoggle">Resend Activation Email</a></li>
+									<li><a href="../login-help.html">Help</a></li>
+								</ul>
+							</div>
+						  
+						</div>
+					</form>
+					<div class="login-page-register-section" style="">
+						<p>Don't have an account?</p>
+						<div class="form-group">
+						  <div class="src_field_box">
+							<a href="../registration.html" id="registerBTN" class="btn btn-lg btn-blue btn-block ripplelink"> REGISTER FREE</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 no-padding forgotpasstoggle" style="display:none;">
+					<div class="login-page-section">
+						<div id="forget_pwd_wrapper">
+							<p class="text-center"><img src="../assets/images/forgot.gif" width="200" alt=""/></p>
+							<h2>Forgot Your Password?</h2>
+							<p>Don't worry, it happens to the best of us.</p>
+							<div class="form-group mt-10">
+								<div class="src_field_box">
+									<input type="email" name="forgot_email" id="forgot_email" class="login-page-input" placeholder="Email Address" onkeydown="keyPress()">
+									<small class="lv-alert alert-danger" id="errForgot" style='display:none'></small>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="src_field_box">
+									<button type="button" id="btn_forgot" class="btn btn-lg btn-primary btn-block ripplelink" onclick="javascript:return forgot_password()">SUBMIT</button>
+								</div>
+							</div>
+							<div class="login-forgot-link">
+								<ul class="list-inline">
+								<li><a href="javascript:void(0);" id="showlogin" class="backtolog"><i class="fa fa-arrow-left"></i> Back to Login</a></li>
+								</ul>
+							</div>
+						</div>
+						<div id="forget_password_success" style="display:none;margin-top:14%;">
+							
+							<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+							<small class="loginpage-alert lv-alert alert-success text-center" style=";font-weight: 600;">
+								<span id="spn_forget_pwd_success"></span> 
+							</small>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 no-padding reactitoggle" style="display:none;">
+					<div class="login-page-section">
+						<div id="resend_mail_wrapper">
+							<p class="text-center"><img src="../assets/images/activation_new.svg" width="170" alt=""/></p>
+							<h2>Resend Activation Email</h2>
+							<p>Don't worry, it happens to the best of us.</p>
+							<div class="form-group mt-10">
+							<div class="src_field_box">
+								<input type="email" name="resend_activation_email" id="resend_activation_email" class="login-page-input" placeholder="Email Address" value="" onkeydown="keyPress()">
+								<small class="lv-alert alert-danger" id="errResend" style='display:none'></small>
+							</div>
+							</div>
+							<div class="form-group">
+								<div class="src_field_box">
+									<button type="button" id="btn_resend" class="btn btn-lg btn-primary btn-block ripplelink" onclick="javascript:return resend_activation()">SEND</button>
+								</div>
+							</div>
+							<div class="login-forgot-link">
+								<ul class="list-inline">
+								<li><a href="javascript:void(0);" id="showlogin2" class="backtolog"><i class="fa fa-arrow-left"></i> Back to Login</a></li>
+								</ul>
+							</div>
+						</div>
+						<div id="resend_mail_success" style="display:none;margin-top:14%;">
+							
+							<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+							<small class="loginpage-alert lv-alert alert-success text-center" style=";font-weight: 600;">
+								<span id="spn_resend_mail_success"></span> 
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+
+</div>
+<section id="footer" class="fullpage-mobile-section loginpage-mobile">
+	<div class="row">
+		<div class="downloadapp-fullpage grey2">
+			<div class="container row_no_marging_padding">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="download-section text-capitalize text-center"><h4>Find Your Perfect</h4><h2>LIFE PARTNER ON THE GO</h2><p>40+ Different Languages | 480+ Castes | 3200 Cities</p>
+							<div style="padding-bottom:10px;">
+								<a href="https://itunes.apple.com/us/app/lovevivah/id1239412737?mt=8" target="_blank"><img alt="App-store" src="../assets/images/AppStore.png"></a>
+								<a href="https://play.google.com/store/apps/details?id=com.tanishasystem.lovevivah&amp;hl=en" target="_blank"><img class="irc_mi" src="../assets/images/Googleplay.png" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 hidden-xs"><div class="fullpage-mobile-img"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+$(document).ready(function(){
+    $("#showlogin").click(function(){        
+		$(".forgotpasstoggle").hide();
+		$(".logintoggle").show();
+		$(".reactitoggle").hide();
+    });
+    $("#showforgotpass").click(function(){        
+		$(".forgotpasstoggle").show();
+		$(".logintoggle").hide();
+		$(".reactitoggle").hide();
+    });
+	
+	$("#reactitoggle").click(function(){        
+		$(".forgotpasstoggle").hide();
+		$(".logintoggle").hide();
+		$(".reactitoggle").show();
+    });
+	$("#showlogin2").click(function(){        
+		$(".forgotpasstoggle").hide();
+		$(".logintoggle").show();
+		$(".reactitoggle").hide();
+    });
+});
+$(document).ready(function(){
+	
+	});
+$(function(){
+	var ink, d, x, y;
+	$(".ripplelink").click(function(e){
+		if($(this).find(".ink").length === 0){
+			$(this).prepend("<span class='ink'></span>");
+		}
+			 
+		ink = $(this).find(".ink");
+		ink.removeClass("animate");
+		 
+		if(!ink.height() && !ink.width()){
+			d = Math.max($(this).outerWidth(), $(this).outerHeight());
+			ink.css({height: d, width: d});
+		}
+		 
+		x = e.pageX - $(this).offset().left - ink.width()/2;
+		y = e.pageY - $(this).offset().top - ink.height()/2;
+		
+		ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+	});
+});
+</script>
+
+      
+    
+   <section class="browse-matrimonial">
+	<div class="wrapper mobile-view">    
+        <button class="myButton" onclick="$('#fotter-mobile').slideToggle('slow');"><span>Browse Matrimonial Profiles</span> <i class="fa fa-plus-circle"></i> </button>
+      <div id="fotter-mobile" style="display:none">
+        <ul>  
+            <li class="heading">Religion:</li> 
+			<li><a href="../matrimony/hindu-matrimony.html">Hindu</a></li>
+			<li><a href="../matrimony/jain-matrimony.html">Jain</a></li> 
+            <li><a href="../matrimony/muslim-matrimony.html">Muslim </a></li> 
+			<li><a href="../matrimony/christian-matrimony.html">Christian</a></li>
+            <li><a href="../matrimony/sikh-matrimony.html">Sikh</a></li>
+            <li><a href="../matrimony/parsi-matrimony.html">Parsi</a></li>
+			<li><a href="../matrimony/buddhist-matrimony.html">Buddhist</a></li>
+			<li><a href="../matrimony/jewish-matrimony.html">Jewish </a></li>
+			</ul>		  
+        <ul>  
+            <li class="heading">Caste:</li> 
+			<li><a href="../matrimony/agarwal-matrimony.html">Agarwal </a></li>
+			<li><a href="../matrimony/gupta-matrimony.html">Gupta </a></li>
+            <li><a href="../matrimony/arora-matrimony.html">Arora </a></li>
+            <li><a href="../matrimony/baniya-matrimony.html">Baniya </a></li> 
+            <li><a href="../matrimony/brahmin-matrimony.html">Brahmin</a></li> 
+            <li><a href="../matrimony/jat-matrimony.html">Jat </a></li>
+            <li><a href="../matrimony/kayastha-matrimony.html">Kayastha </a></li>
+            <li><a href="../matrimony/khatri-matrimony.html">Khatri </a></li>
+            <li><a href="../matrimony/rajput-matrimony.html">Rajput </a></li>
+            <li><a href="../matrimony/sunni-matrimony.html">Sunni </a></li>
+		
+         
+        </ul>
+        <ul>  
+            <li class="heading">State:</li> 
+		
+		    <li><a href="../matrimony/delhi-matrimony.html">Delhi</a></li> 
+		    <li><a href="../matrimony/chandigarh-matrimony.html">Chandigarh</a></li> 
+            <li><a href="../matrimony/gujarat-matrimony.html">Gujarat</a></li>
+            <li><a href="../matrimony/haryana-matrimony.html">Haryana</a></li>
+            <li><a href="../matrimony/karnataka-matrimony.html">Karnataka</a></li>
+            <li><a href="../matrimony/maharashtra-matrimony.html">Maharashtra</a></li>
+            <li><a href="../matrimony/punjab-matrimony.html">Punjab</a></li>
+            <li><a href="../matrimony/rajasthan-matrimony.html">Rajasthan</a></li>
+			<li><a href="../matrimony/uttar-pradesh-matrimony.html">Uttar Pradesh</a></li>
+			<li><a href="../matrimony/west-bengal-matrimony.html">West Bengal</a></li>
+			<li><a href="../matrimony/telangana-matrimony.html">Telangana</a></li>
+		    <li><a href="../matrimony/madhya-pradesh-matrimony.html">Madhya Pradesh</a></li>
+            <li><a href="../matrimony/andhra-pradesh-matrimony.html">Andhra Pradesh</a></li>
+		    <li><a href="../matrimony/tamil-nadu-matrimony.html">Tamil Nadu</a></li>
+          <li><a href="../matrimony/kerala-matrimony.html">Kerala </a></li>
+       
+		</ul>
+        <ul>  
+            <li class="heading">Regional:</li> 
+	        <li><a href="../matrimony/bengali-matrimony.html">Bengali</a></li>
+            <li><a href="../matrimony/gujarati-matrimony.html">Gujarati</a></li>
+            <li><a href="../matrimony/hindi-matrimony.html">Hindi</a></li> 
+            <li><a href="../matrimony/kannada-matrimony.html">Kannada</a></li> 
+            <li><a href="../matrimony/malayalam-matrimony.html">Malayalam</a></li>
+            <li><a href="../matrimony/marathi-matrimony.html">Marathi</a></li>
+            <li><a href="../matrimony/punjabi-matrimony.html">Punjabi</a></li>
+            <li><a href="../matrimony/tamil-matrimony.html">Tamil</a></li>
+            <li><a href="../matrimony/telugu-matrimony.html">Telugu</a></li>
+            <li><a href="../matrimony/urdu-matrimony.html">Urdu</a></li>
+
+		   </ul>
+		<ul>  
+            <li class="heading">Country:</li> 
+				
+			<li><a href="../matrimony/india-matrimony.html">India</a></li>
+			<li><a href="../matrimony/usa-matrimony.html">USA</a></li> 
+            <li><a href="../matrimony/uk-matrimony.html">UK </a></li> 
+			<li><a href="../matrimony/canada-matrimony.html">Canada</a></li>
+            <li><a href="../matrimony/australia-matrimony.html">Australia</a></li>
+			
+          </ul>
+          </div>  
+    </div>
+     <div class="wrapper desktop-view">
+        <h3 class="text-center">Browse Matrimonial Profiles By</h3>
+		<ul>  
+            <li class="heading">Religion:</li> 
+			<li><a href="../matrimony/hindu-matrimony.html">Hindu</a></li>
+			<li><a href="../matrimony/jain-matrimony.html">Jain</a></li> 
+            <li><a href="../matrimony/muslim-matrimony.html">Muslim </a></li> 
+			<li><a href="../matrimony/christian-matrimony.html">Christian</a></li>
+            <li><a href="../matrimony/sikh-matrimony.html">Sikh</a></li>
+            <li><a href="../matrimony/parsi-matrimony.html">Parsi</a></li>
+			<li><a href="../matrimony/buddhist-matrimony.html">Buddhist</a></li>
+			<li><a href="../matrimony/jewish-matrimony.html">Jewish </a></li>
+          </ul>
+		  
+        <ul>  
+            <li class="heading">Caste:</li> 
+			<li><a href="../matrimony/agarwal-matrimony.html">Agarwal </a></li>
+			<li><a href="../matrimony/gupta-matrimony.html">Gupta </a></li>
+            <li><a href="../matrimony/arora-matrimony.html">Arora </a></li>
+            <li><a href="../matrimony/baniya-matrimony.html">Baniya </a></li> 
+            <li><a href="../matrimony/brahmin-matrimony.html">Brahmin</a></li> 
+            <li><a href="../matrimony/jat-matrimony.html">Jat </a></li>
+            <li><a href="../matrimony/kayastha-matrimony.html">Kayastha </a></li>
+            <li><a href="../matrimony/khatri-matrimony.html">Khatri </a></li>
+            <li><a href="../matrimony/rajput-matrimony.html">Rajput </a></li>
+            <li><a href="../matrimony/sunni-matrimony.html">Sunni </a></li>
+		
+         
+        </ul>
+        <ul>  
+            <li class="heading">State:</li> 
+		
+		    <li><a href="../matrimony/delhi-matrimony.html">Delhi</a></li> 
+		    <li><a href="../matrimony/chandigarh-matrimony.html">Chandigarh</a></li> 
+            <li><a href="../matrimony/gujarat-matrimony.html">Gujarat</a></li>
+            <li><a href="../matrimony/haryana-matrimony.html">Haryana</a></li>
+            <li><a href="../matrimony/karnataka-matrimony.html">Karnataka</a></li>
+            <li><a href="../matrimony/maharashtra-matrimony.html">Maharashtra</a></li>
+            <li><a href="../matrimony/punjab-matrimony.html">Punjab</a></li>
+            <li><a href="../matrimony/rajasthan-matrimony.html">Rajasthan</a></li>
+			<li><a href="../matrimony/uttar-pradesh-matrimony.html">Uttar Pradesh</a></li>
+			<li><a href="../matrimony/west-bengal-matrimony.html">West Bengal</a></li>
+			<li><a href="../matrimony/telangana-matrimony.html">Telangana</a></li>
+		    <li><a href="../matrimony/madhya-pradesh-matrimony.html">Madhya Pradesh</a></li>
+            <li><a href="../matrimony/andhra-pradesh-matrimony.html">Andhra Pradesh</a></li>
+			<li><a href="../matrimony/tamil-nadu-matrimony.html">Tamil Nadu</a></li>
+          <li><a href="../matrimony/kerala-matrimony.html">Kerala </a></li>
+       
+		</ul>
+        <ul>  
+            <li class="heading">Regional:</li> 
+	        <li><a href="../matrimony/bengali-matrimony.html">Bengali</a></li>
+            <li><a href="../matrimony/gujarati-matrimony.html">Gujarati</a></li>
+            <li><a href="../matrimony/hindi-matrimony.html">Hindi</a></li> 
+            <li><a href="../matrimony/kannada-matrimony.html">Kannada</a></li> 
+            <li><a href="../matrimony/malayalam-matrimony.html">Malayalam</a></li>
+            <li><a href="../matrimony/marathi-matrimony.html">Marathi</a></li>
+            <li><a href="../matrimony/punjabi-matrimony.html">Punjabi</a></li>
+            <li><a href="../matrimony/tamil-matrimony.html">Tamil</a></li>
+            <li><a href="../matrimony/telugu-matrimony.html">Telugu</a></li>
+            <li><a href="../matrimony/urdu-matrimony.html">Urdu</a></li>
+
+		   </ul>
+		  <ul>  
+            <li class="heading">Country:</li> 
+				
+			<li><a href="../matrimony/india-matrimony.html">India</a></li>
+			<li><a href="../matrimony/usa-matrimony.html">USA</a></li> 
+            <li><a href="../matrimony/uk-matrimony.html">UK </a></li> 
+			<li><a href="../matrimony/canada-matrimony.html">Canada</a></li>
+            <li><a href="../matrimony/australia-matrimony.html">Australia</a></li>
+			
+          </ul>  
+    </div>
+
+ 
+ </section>
+<section class="footer">
+    <div class="container footer-two">
+    <div class="col-md-12 col-sm-12">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="../about-us.html"><i class="fa fa-check"></i> About Us</a></li>
+				<li><a href="../success_stories_controller/view_success_stories.html"><i class="fa fa-check"></i> Success Stories</a></li>
+                <li><a href="../matrimony/blog/index.html" target="_blank"><i class="fa fa-check"></i> Blogs</a></li>
+              </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <h4>Help &amp; Support</h4>
+            <ul>
+                <li><a href="../help-support.html"><i class="fa fa-check"></i> Live Support</a></li>
+                <li><a href="../faq.html"><i class="fa fa-check"></i> Online Help - FAQ</a></li>
+                <li><a href="../contact-us.html"><i class="fa fa-check"></i> Contact us</a></li>
+                <li><a href="../sitemap.html"><i class="fa fa-check"></i> Sitemap</a></li>
+           </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <h4>Policies</h4>
+            <ul>
+                <li><a href="../privacy-policy.html"><i class="fa fa-check"></i> Privacy Policy</a></li>
+                <li><a href="../terms-conditions.html"><i class="fa fa-check"></i> Terms of Use</a></li>
+                <li><a href="../disclaimer.html"><i class="fa fa-check"></i> Disclaimer</a></li>
+                <li><a href="../payment-policy.html"><i class="fa fa-check"></i> Payment Policy</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <h4>Follow Us</h4>
+         <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">      	      
+	      <li> <a href="https://www.facebook.com/LoveVivah24x7" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li> <a href="https://twitter.com/lovevivah24x7" target="_blank"><i class="fa fa-twitter"></i></a></li>   
+	      <li> <a href="https://www.linkedin.com/company/lovevivah-matrimonial-services" target="_blank"><i class="fa fa-linkedin"></i></a></li> 
+	      <li> <a href="https://www.pinterest.com/lovevivah/" target="_blank"><i class="fa fa-pinterest"></i></a></li> 
+          <li> <a href="https://plus.google.com/+LoveVivah-Matrimonial-Services/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li> 
+	  	</ul>
+        <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+        <h4>App Available on</h4>      	      
+	      <li> <a href="https://play.google.com/store/apps/details?id=com.tanishasystem.lovevivah" target="_blank"><i class="fa fa-android"></i></a></li>
+          <li> <a href="https://itunes.apple.com/us/app/lovevivah/id1239412737?mt=8" target="_blank"><i class="fa fa-apple"></i></a></li>
+	  	</ul>
+        </div>
+		<div class="col-md-2 col-sm-6 col-xs-6">           
+        <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">          
+          <li>
+	   <div class="right new-norton">
+		<table style="float:left;" border="0" cellpadding="2" cellspacing="0">
+		<tbody>
+		<tr>
+		<td align="center" valign="top">
+		<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.lovevivah.com&amp;size=M&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script>
+		<map name="sealmap_medium" id="sealmap_medium"><area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="javascript:vrsn_splash()" shape="rect" coords="0,0,115,58" tabindex="-1" style="outline:none;"><area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="javascript:vrsn_splash()" shape="rect" coords="0,58,63,81" tabindex="-1" style="outline:none;"><area alt="" title="" href="javascript:symcBuySSL()" shape="rect" coords="63,58,115,81" style="outline:none;"></map><br>
+		<a href="https://www.symantec.com/verisign/ssl-certificates" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a></td>
+		</tr>
+		</tbody></table>
+		</div> 
+		</li>
+	  	</ul>
+        </div>
+      </div> 
+    </div>
+  </section>
+ 
+ <footer class="tiny-footer"><span>Copyrights 2018, Lovevivah.com. All Rights Reserved</span></footer>
+ <script type="text/javascript" src="../assets/js/bootstrap/bootstrap.min.js" ></script> 
+ <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script type="text/javascript" src="../assets/app/pagecontent2dac.js?v=21"></script>
+<script>
+	$(document).ready(function () {
+		$('.myButton').click(function(){   
+			$(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
+		});	
+	});
+</script> 
+	<script  type="text/javascript" src="../assets/js/commone062.js?v=27"></script>
+	<script type="text/javascript">  
+	$(window).on("load",function(){    
+		$('#errorModal').modal('show');
+	}); 
+	</script>
+  <div class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog animated fadeInUp">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" id= 'Mobile_PopUp_Close' data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i></button>
+          </div>
+           
+            <div class="modal-footer">
+			<p class="download-line1">Download our App</p>
+                 <p class="download-line2">and search your life partner </p>
+                 <p class="download-line3">on the go</p>
+            <div class="mobile-screen"> <img src="../assets/images/downloadapp.png" class="download-mobile-img"  alt=""/></div>
+            <div class="download-buttons">
+             <button type="button" class="btn btn-theme border-r100 download-mobile" id=""><i class="fa fa-apple" id ="apple-link"></i> <i class="fa fa-android" id ="android-link"></i> DOWNLOAD NOW</button>
+            </div>
+                <span class="mobile-or">OR</span>
+                <a href="#" class="skiptocon" id= 'Mobile_PopUp_Continue' class="close" data-dismiss="modal"> Continue to Mobile Site</a>
+            </div>
+        </div>        
+    </div>   
+</div>
+  <script type="text/javascript">
+    $(window).on('load',function(){
+	 var IOS     = navigator.userAgent.match(/(\(iPod|\(iPhone|\(iPad)/);
+	 var ANDROID = navigator.userAgent.match(/Android/i);
+	  if (IOS || ANDROID) {
+	  if(IOS){
+	     $('#android-link').css('display','none');
+		 var urlLink = 'https://itunes.apple.com/us/app/lovevivah/id1239412737?mt=8';
+		 var addID = 'Mobile_IOS_PopUp_Download';
+		}else if(ANDROID){
+		  $('#apple-link').css('display','none');
+		  var urlLink = 'https://play.google.com/store/apps/details?id=com.tanishasystem.lovevivah';
+		  var addID = 'Mobile_Android_PopUp_Download';
+		}else{}      
+	   var skipAppLink = '';	
+	   if(skipAppLink != '1'){
+	    $('#myModalFullscreen').modal('show');
+		$('.download-mobile').attr('id', addID);
+	   }
+	  }
+	 $('.download-mobile').click(function(){	      
+			window.location.href = urlLink;
+		}); 
+	$('#Mobile_PopUp_Close, #Mobile_PopUp_Continue ').click(function(){
+	    var NORMALSERVER = "";	  
+			$.ajax({
+					    async: true,
+						type: "post",
+					    url: NORMALSERVER+"/common_webservice_controller/download_app",
+					    data:"&dwn_link= 1",						  
+						dataType:"json",						  
+					        success:function(data)
+							{						
+								
+							},
+							error: function(jqXHR, textStatus, errorThrown) {
+								console.log(textStatus, errorThrown);
+							  }
+					 })
+		}); 	
+    });
+</script>        
+  </body>
+
+<!-- Mirrored from www.lovevivah.com/login_controller/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Feb 2018 16:28:11 GMT -->
+</html> 
